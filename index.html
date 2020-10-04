@@ -4,8 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zdrowe Relacje</title>
+    <style>
+        :root {
+            --main-bg-color:#fffbd1;
+             /*#f9f8ee;*/
+            --sec-bg-color: #f9f8ee;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center
+        }
+
+        .sec {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .title {
+            height: 200px;
+            font-size: 40px;
+            background: var(--main-bg-color);
+        }
+
+        .target {
+            margin: 100px 30px 100px;
+        }
+
+        .movie {
+            background: var(--sec-bg-color);
+        }
+
+        .symptomps {
+        }
+
+        .symptompsA {
+            margin: 100px 0px 30px 0px;
+        }
+
+        .symptompsB {
+            margin: 30px 0px 0px 0px;
+        }
+
+        .symptompsList {
+
+        }
+
+        .listA {
+            display: list-item;         
+            list-style-type: disc;      
+            list-style-position: inside;
+        }
+
+        .offer {
+            margin-top: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background: var(--sec-bg-color);
+        }
+
+        .offerInner {
+            width: 70%;
+        }
+
+        .offerPar {
+            margin-top: 50px;
+            
+        }
+
+        .contact {
+            line-height: 30px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background: var(--main-bg-color);;
+        }
+
+        .footLink {
+            color: black;
+        }
+
+    </style>
 </head>
 <body>
-    Test
+    <div class="title sec">ZDROWE RELACJE</div>
+    <div class="target sec">Ta pomoc skierowana jest do mężczyzn którzy wiedzą że mieli trudne dzieciństwo i doświadczają problemów w relacjach z kobietami</div>
+
+    <div class="movie sec">
+        <img src="pic.png" style="width: 70%"></div>
+    </div>
+
+    <div class="sec">
+        <div class="symptomps">
+            <div class="symptompsA">Jeżeli zaobserwowałeś u siebie jeden z następujących objawów</div>
+            <div class="symptompsList">
+                <div class="listA">czujesz że Ty sam sabotujesz swoje działania</div>
+                <div class="listA">działasz odpychająco na kobiety i nie rozumiesz dlaczego</div>
+                <div class="listA">często dopadają Cię negatywne emocje jak smutek, apatia, lęk (przed podejściem) itp.</div>
+                <div class="listA">czujesz że nie należ Ci się to co dobre</div>
+                <div class="listA">czujesz bezsilność, utknąłeś w miejcu jeśli chodzi o relacje z kobietami i nie wiesz co dalej</div>
+                <div class="listA">Twoje relacje z partnerką są nie dobre</div>
+                <div class="listA">czujesz że w dzieciństwie coś w Tobie "zgasło"</div>
+                <div class="listA">czujesz że Twoje otoczenie w dzieciństwie było wrogo nastawione do Ciebie (rodzice, rodzeńśtwo i/lub szkoła)</div>
+            </div>
+            <div class="symptompsB">to trafiłeś do właściwego człowieka - sam przechodziłem przez te problemy i jestem w stanie Ci pomóc</div>
+        </div>
+    </div>
+    <div class="offer sec">      
+        <div class="offerInner">
+            <div class="">
+                Na moich konsultacjach skype/tel/fb-phone przyjrzymy się Twojej konkretnej sytuacji i popracujemy nad tzw. "Inner Game" - "wewnętrzną grą" i tutaj skupimy się na tym aby naprostować błędy jakie pojawiają się w obszarze Twoich przekonań a także zostaniesz dokładnie poinstruowany co robić z emocjami, które grają fundamentalną rolę przy interakcjach z kobietami - jak z nimi pracować w samotności oraz podczas interakcji. Ta wiedza ma unikalny charakter i została sprawdzona w praktyce.
+            </div>
+            
+            <div class="offerPar">
+                Cena godzinnej konsultacji wynosi 300zł - konsultacja zwykle zostanie rozbita na 2 rozmowy w odstępie od tygodnia do miesiąca abyś miał czas na zastosowanie instrukcji i byś mógł dostać feedback.
+            </div>
+        </div>  
+    </div>
+    <div class="contact sec">
+        Jeżeli jesteś zainteresowany zadzwoń <b>+48 510 367 595</b>
+        lub napisz <a href="mailto:kamil.k.kielczewski@gmail.com">kamil.k.kielczewski@gmail.com</a>
+        aby otrzymać dalsze szczegóły
+    </div>
+
+    <div class="footer sec">
+        <div>
+            &copy; <a href="https://airavana.net" class="footLink"> Airavana Systems</a>
+        </div>
+    </div>
 </body>
 </html>
