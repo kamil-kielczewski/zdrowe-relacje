@@ -16,7 +16,8 @@
             flex-direction: column;
             font-family: Arial, Helvetica, sans-serif;
             justify-content: center;
-            align-items: center
+            align-items: center;
+            line-height: 30px;
         }
 
         .sec {
@@ -34,7 +35,9 @@
         }
 
         .target {
-            margin: 100px 30px 100px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            width: 80%;
         }
 
         .movie {
@@ -47,6 +50,7 @@
         }
 
         .symptomps {
+            max-width: 80%;
         }
 
         .symptompsA {
@@ -58,13 +62,12 @@
         }
 
         .symptompsList {
-
+            list-style-position: outside;
         }
 
         .listA {
             display: list-item;         
             list-style-type: disc;      
-            list-style-position: inside;
         }
 
         .offer {
@@ -103,7 +106,7 @@
 </head>
 <body>
     <div class="title sec">ZDROWE RELACJE</div>
-    <div class="target sec">Ta pomoc skierowana jest do mężczyzn którzy wiedzą że mieli trudne dzieciństwo i doświadczają problemów w relacjach z kobietami</div>
+    <div class="target sec">Ta pomoc skierowana jest do mężczyzn, którzy pochodzą z toksycznych lub rozbitych rodzin i doświadczają problemów w relacjach z kobietami</div>
 
     <div class="movie sec">
         <!-- <img src="pic.png" style="width: 70%"></div> -->
@@ -116,16 +119,16 @@
     <div class="sec">
         <div class="symptomps">
             <div class="symptompsA">Jeżeli zaobserwowałeś u siebie jeden z następujących objawów</div>
-            <div class="symptompsList">
-                <div class="listA">czujesz że Ty sam sabotujesz swoje działania</div>
-                <div class="listA">działasz odpychająco na kobiety i nie rozumiesz dlaczego</div>
-                <div class="listA">często dopadają Cię negatywne emocje jak smutek, apatia, lęk (przed podejściem) itp.</div>
-                <div class="listA">czujesz że nie należ Ci się to co dobre</div>
-                <div class="listA">czujesz bezsilność, utknąłeś w miejcu jeśli chodzi o relacje z kobietami i nie wiesz co dalej</div>
-                <div class="listA">Twoje relacje z partnerką są nie dobre</div>
-                <div class="listA">czujesz że w dzieciństwie coś w Tobie "zgasło"</div>
-                <div class="listA">czujesz że Twoje otoczenie w dzieciństwie było wrogo nastawione do Ciebie (rodzice, rodzeńśtwo i/lub szkoła)</div>
-            </div>
+            <ul class="symptompsList">
+                <li class="listA">czujesz że Ty sam sabotujesz swoje działania</li>
+                <li class="listA">działasz odpychająco na kobiety i nie rozumiesz dlaczego</li>
+                <li class="listA">często dopadają Cię negatywne emocje jak smutek, apatia, lęk (przed podejściem) itp.</li>
+                <li class="listA">czujesz że nie należ Ci się to co dobre</li>
+                <li class="listA">czujesz bezsilność, utknąłeś w miejcu jeśli chodzi o relacje z kobietami i nie wiesz co dalej</li>
+                <li class="listA">Twoje relacje z partnerką są nie dobre</li>
+                <li class="listA">czujesz że w dzieciństwie coś w Tobie "zgasło"</li>
+                <li class="listA">czujesz że Twoje otoczenie w dzieciństwie było wrogo nastawione do Ciebie (rodzice, rodzeńśtwo i/lub szkoła)</li>
+            </ul>
             <div class="symptompsB">to trafiłeś do właściwego człowieka - sam przechodziłem przez te problemy i jestem w stanie Ci pomóc</div>
         </div>
     </div>
