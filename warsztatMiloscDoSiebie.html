@@ -6,8 +6,9 @@
     <title>Zdrowe Relacje</title>
     <style>
         :root {
-            --main-bg-color:#8e4343;
-            --sec-bg-color: #f1f1f1;
+            --main-bg-color:#000;
+            --sec-bg-color: black;
+            --th-bg-color: #ff9999;
         }
         body {
             margin: 0;
@@ -19,6 +20,10 @@
             line-height: 30px;
         }
 
+        a {
+            color: black;
+        }
+
         .sec {
             display: flex;
             width: 100%;
@@ -26,10 +31,21 @@
             align-items: center;
             flex-direction: column;
         }
-
-        .secBack {
+ 
+        .bgSec {
             background: var(--sec-bg-color);
+            color: white;
         }
+
+        .bgSec2 {
+            background: var(--th-bg-color);
+            color: white;
+        }
+
+        .black {
+            color: black;
+        }
+
 
         .workshopTitle {
             font-size: 30px;
@@ -105,7 +121,6 @@
             margin-top: 50px;
             padding-top: 50px;
             padding-bottom: 50px;
-            background: var(--sec-bg-color);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -121,6 +136,10 @@
             
         }
 
+        .offerPar a {
+            color: black;
+        }
+
         .contact {
             min-width: 300px;
             line-height: 30px;
@@ -128,17 +147,11 @@
             margin-bottom: 100px;
         }
 
-        .footer {
-            color: white;
+        .footer, .footer a {
+            color: black;
             /* min-width: 300px; */
             padding-top: 20px;
             padding-bottom: 20px;
-            background: rgb(100 100 100);
-        }
-
-        .footLink {
-            color: white;
-            
         }
 
         .stars {
@@ -250,7 +263,7 @@
         </div>
     </div> 
 
-    <div class="offer sec secBack">      
+    <div class="offer sec bgSec2 black">      
         <div class="offerInner">
             <div class="">
                 Warsztat będzie obejmował 6 nagrań video z więdzą teoretyczną i praktyczną (gdzie głównie będizemy skupiali się na pracy z emocjami)
@@ -261,8 +274,8 @@
 
             <div class="">
                 Płatność <b>350 PLN</b> do startu warsztatów 31.10.2020r <br> 
-                (po tym terminie 550 PLN) na rachunek<br>
-                <b>77 1090 1362 0000 0001 0456 7318</b> (santander)<br>
+                (po tym terminie 550 PLN) na rachunek (santander)<br>
+                <b>77 1090 1362 0000 0001 0456 7318</b> <br>
                 Kamil Kiełczewski Poznań - z dopiskiem "warsztat online"
             </div>
             

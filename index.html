@@ -6,8 +6,9 @@
     <title>Zdrowe Relacje</title>
     <style>
         :root {
-            --main-bg-color:#8e4343;
-            --sec-bg-color: #f1f1f1;
+            --main-bg-color:#000;
+            --sec-bg-color: black;
+            --th-bg-color: #ff9999;
         }
         body {
             margin: 0;
@@ -16,6 +17,14 @@
             font-family: Arial, Helvetica, sans-serif;
             justify-content: center;
             align-items: center;
+        }
+
+        a {
+            color: white;
+        }
+
+        .black {
+            color: black;
         }
 
         .sec {
@@ -70,7 +79,18 @@
 
         .bgSec {
             background: var(--sec-bg-color);
+            color: white;
         }
+
+        .bgSec2 {
+            background: var(--th-bg-color);
+            color: black;
+        }
+
+        .bgSec2 a {
+            color: black;
+        }
+
         .symptomps {
             max-width: 80%;
         }
@@ -97,7 +117,6 @@
             margin-top: 50px;
             padding-top: 50px;
             padding-bottom: 50px;
-            background: var(--sec-bg-color);
         }
 
         .offerInner {
@@ -108,7 +127,6 @@
             margin-top: 50px;
             padding-top: 50px;
             padding-bottom: 50px;
-            background: var(--sec-bg-color);
         }
 
         .workshop-title {
@@ -134,16 +152,16 @@
         }
 
         .footer {
-            color: white;
+            color: black;
             /* min-width: 300px; */
             padding-top: 20px;
             padding-bottom: 20px;
-            background: rgb(100 100 100);
         }
 
-        .footLink {
-            color: white;
+        .footer a {
+            color: black;
         }
+
         
         .fb-group {
             display: flex;
@@ -201,7 +219,7 @@
         i doświadczają problemów w relacjach z kobietami
     </div>
 
-    <div class="sec bgSec">
+    <div class="sec ">
         <div class="symptomps">
             <div class="symptompsA">Jeżeli zaobserwowałeś u siebie jeden z następujących objawów</div>
             <ul class="symptompsList">
@@ -226,7 +244,7 @@
 
     </div>
 
-    <div class="workshop sec">      
+    <div class="workshop sec bgSec2">      
         <div class="workshop-title">
             <b>Warsztaty online</b>
         </div>
@@ -237,7 +255,7 @@
 
     </div>
 
-    <div class="offer sec">      
+    <div class="offer sec bgSec">      
         <div class="offerInner">
             <div class="">
                 <b>Konsultacje indywidualne</b>
@@ -260,11 +278,11 @@
         <br><br>
         <div class="fb-group">
             <img style="margin-right: 10px;" width="30px" src="fb.svg"></img>
-            Męska grupa wsparcia na facebooku &nbsp; <a href="https://www.facebook.com/groups/zdrowerelacje">TUTAJ</a>
+            Męska grupa wsparcia na facebooku &nbsp; <a class="black" href="https://www.facebook.com/groups/zdrowerelacje">TUTAJ</a>
         </div>
     </div>
 
-    <div class="footer sec">
+    <div class="footer sec ">
         <div>&copy; <a href="https://airavana.net" class="footLink"> Airavana Systems</a></div>
     </div>
 </body>
