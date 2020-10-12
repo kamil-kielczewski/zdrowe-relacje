@@ -29,19 +29,32 @@
         }
 
         .title {
-            height: 200px;
-            font-size: 40px;
             background: var(--main-bg-color);
+            background: url(./ig.png);
+            background-size: cover;
+            height: 400px;
+            font-size: 40px;
+        }
+
+        .title-text {
+            color: white;
+            font-size: 80px;
+            font-weight: bolder;
+            margin-bottom: 100px;
         }
 
         .target {
-            margin-top: 100px;
+            margin-top: 150px;
             margin-bottom: 100px;
             width: 80%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 50px;
         }
 
         .movie {
-            background: var(--sec-bg-color);
+            /* background: var(--sec-bg-color); */
+            margin-top: 50px;
         }
 
         .movieInner {
@@ -49,23 +62,22 @@
             width: 70%;
         }
 
-        @media (max-width: 600px) {
-            .movieInner {
-                height: 233px;
-                width: 100%;
-            }
-        }
 
+
+        .bgSec {
+            background: var(--sec-bg-color);
+        }
         .symptomps {
             max-width: 80%;
         }
 
         .symptompsA {
-            margin: 100px 0px 30px 0px;
+            margin: 50px 0px 30px 0px;
+            text-align: center;
         }
 
         .symptompsB {
-            margin: 30px 0px 0px 0px;
+            margin: 30px 0px 50px 0px;
         }
 
         .symptompsList {
@@ -134,21 +146,25 @@
             justify-content: center;
         }
 
+        @media (max-width: 600px) {
+            .movieInner {
+                height: 233px;
+                width: 100%;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <div class="title sec">ZDROWE RELACJE</div>
-    <div class="target sec">Ta pomoc skierowana jest do mężczyzn, którzy pochodzą z toksycznych lub rozbitych rodzin i doświadczają problemów w relacjach z kobietami</div>
-
-    <div class="movie sec">
-        <!-- <img src="pic.png" style="width: 70%"></div> -->
-        <div class="movieInner">            
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4bs1sKukOwE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
+    <div class="title sec">
+        <div class="title-text">Zdrowe Relacje</div>
+    </div>
+    <div class="target sec">Ta pomoc skierowana jest do mężczyzn,<br>
+        którzy pochodzą z toksycznych lub rozbitych rodzin<br>
+        i doświadczają problemów w relacjach z kobietami
     </div>
 
-    <div class="sec">
+    <div class="sec bgSec">
         <div class="symptomps">
             <div class="symptompsA">Jeżeli zaobserwowałeś u siebie jeden z następujących objawów</div>
             <ul class="symptompsList">
@@ -163,6 +179,14 @@
             </ul>
             <div class="symptompsB">to trafiłeś do właściwego człowieka - nazywam się Kamil Kiełczewski i sam przechodziłem przez te problemy i jestem w stanie Ci pomóc</div>
         </div>
+    </div>
+
+    <div class="movie sec">
+        <!-- <img src="pic.png" style="width: 70%"></div> -->
+        <div class="movieInner">            
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4bs1sKukOwE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
     </div>
 
     <div class="workshop sec">      
