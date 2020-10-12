@@ -27,12 +27,17 @@
             flex-direction: column;
         }
 
+        .logo {
+            width: 500px;
+        }
+
         .title {
-            background: var(--main-bg-color);
-            background: url(./ig.png);
-            background-size: cover;
+            /* background: var(--main-bg-color);
+            background: url(./ig.png); */
+            /* background-size: cover; */
             height: 400px;
             text-align: center;
+            border-bottom: 1px solid #eadede;
         }
 
         .title-text {
@@ -148,9 +153,12 @@
 
         @media (max-width: 600px) {
 
+            .logo {
+                width: 200px;
+            }
             .title {
-                background: url(./ig.png);
-                background-size: cover;
+                /* background: url(./ig.png);
+                background-size: cover; */
                 height: 200px;
                 text-align: center;
             }
@@ -175,8 +183,8 @@
 </head>
 <body>
     <div class="title sec">
-        <div class="title-text">Zdrowe Relacje</div>
-        
+        <!-- <div class="title-text">Zdrowe Relacje</div> -->
+        <img src="logo_1280x1024.svg" class="logo">
     </div>
     <div class="target sec">Ta pomoc skierowana jest do mężczyzn,<br>
         którzy pochodzą z toksycznych lub rozbitych rodzin<br>
