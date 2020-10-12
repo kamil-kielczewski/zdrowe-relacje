@@ -6,9 +6,8 @@
     <title>Zdrowe Relacje</title>
     <style>
         :root {
-            --main-bg-color:#fffbd1;
-             /*#f9f8ee;*/
-            --sec-bg-color: #f9f8ee;
+            --main-bg-color:#ad2957;
+            --sec-bg-color: #ffeff6;
         }
         body {
             margin: 0;
@@ -32,16 +31,35 @@
             background: var(--sec-bg-color);
         }
 
-        .titleInner {
+        .workshopTitle {
+            font-size: 30px;
+            margin: 50px;
+            /* margin-top: 50px; */
+        }
+
+        .workshopTarget {
+            margin: 50px;
+            margin-top: 30px;
+        }
+
+
+        /* .titleInner {
             line-height: 1.1;
             text-align: center;
             width: 80%;
+        } */
+
+        .logo {
+            width: 500px;
         }
 
         .title {
-            height: 200px;
-            font-size: 40px;
-            background: var(--main-bg-color);
+            /* background: var(--main-bg-color);
+            background: url(./ig.png); */
+            /* background-size: cover; */
+            height: 400px;
+            text-align: center;
+            border-bottom: 1px solid #eadede;
         }
 
         .target {
@@ -109,6 +127,7 @@
         }
 
         .footer {
+            color: white;
             min-width: 300px;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -116,7 +135,8 @@
         }
 
         .footLink {
-            color: black;
+            color: white;
+            
         }
 
         .stars {
@@ -136,6 +156,16 @@
         }
 
         @media (max-width: 600px) {
+            .logo {
+                width: 200px;
+            }
+            .title {
+                /* background: url(./ig.png);
+                background-size: cover; */
+                height: 200px;
+                text-align: center;
+            }
+
             .movieInner {
                 height: 233px;
                 width: 100%;
@@ -149,8 +179,16 @@
     </style>
 </head>
 <body>
-    <div class="title sec"><div class="titleInner">Miłuj siebie by kochać i być kochanym</div></div>
-    <div class="target sec">Ta pomoc skierowana jest do mężczyzn, którzy pochodzą z toksycznych lub rozbitych rodzin i doświadczają problemów w relacjach z kobietami</div>
+    <div class="title sec">
+        <!-- <div class="title-text">Zdrowe Relacje</div> -->
+        <img src="logo_1280x1024.svg" class="logo">
+    </div>
+
+    <div class="sec">
+        <div class="workshopTitle">Miłuj siebie by kochać i być kochanym</div>
+        <div class="workshopTarget">Ta pomoc skierowana jest do mężczyzn, którzy pochodzą z toksycznych lub rozbitych rodzin i doświadczają problemów w relacjach z kobietami</div>
+    </div>
+    
 
     <div class="movie sec">
         <!-- <img src="pic.png" style="width: 70%"></div> -->
