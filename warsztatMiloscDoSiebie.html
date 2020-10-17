@@ -17,6 +17,10 @@
 
 
     <style>
+        html {
+            font-size: 6.25%;
+        }
+
         :root {
             --main-bg-color:#000;
             --sec-bg-color: black;
@@ -99,7 +103,7 @@
         }
 
         .movie {
-            background: var(--sec-bg-color);
+            /* background: var(--sec-bg-color); */
         }
 
         .movieInner {
@@ -107,27 +111,13 @@
             width: 70%;
         }
 
-        .symptomps {
-            width: 50%;
+        .questions {
             padding-bottom: 50px;
+            text-align: center;
+            font-size: 30px;
+            line-height: 50px;
         }
 
-        .symptompsA {
-            margin: 50px 50px 30px 0px;
-        }
-
-        .symptompsB {
-            margin: 30px 0px 0px 0px;
-        }
-
-        .symptompsList {
-            list-style-position: outside;
-        }
-
-        .listA {
-            display: list-item;         
-            list-style-type: disc;      
-        }
 
         .offer {
             margin-top: 50px;
@@ -139,8 +129,9 @@
         }
 
         .offerInner {
-            width: 70%;
+            width: 80%;
             text-align: center;
+            font-size: 20rem
         }
 
         .offerPar {
@@ -157,6 +148,7 @@
             line-height: 30px;
             margin-top: 100px;
             margin-bottom: 100px;
+            font-size: 15rem
         }
 
         .footer, .footer a {
@@ -164,11 +156,11 @@
             /* min-width: 300px; */
             padding-top: 20px;
             padding-bottom: 20px;
+            font-size: 15rem
         }
 
         .stars {
             height: 30px;
-            margin-top: 30px;
         }
 
         .fb-group {
@@ -182,9 +174,112 @@
             margin-top: 80px;
         }
 
+        .logoPic {
+            width: 100%;
+        }
+
+        /* new layout */
+
+        .padd {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .fontMain {
+            color: #522127;
+        }
+
+        .fontSec {
+            color: #992c32;
+        }
+
+        .titleMain {
+            margin-top: 100px;
+            font-size: 40rem;
+            text-align: center;            
+            line-height: 50rem;
+            margin-bottom: 10px;
+        }
+
+        .titleSec {
+            font-size: 20rem;
+        }
+
+
+
+        .questions {
+            margin-top: 100px;
+        }
+
+        .questionMain {
+            font-size: 25px;
+        }
+
+        .questionSec {
+            font-size: 20px;
+        }
+
+        .questionsEnd {
+            margin-top: 50px;
+            font-size: 30rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .whoIam {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .whoIamTitle {
+            font-size: 30rem;
+        }
+
+        .whoIamDesc {
+            margin-top: 50px;
+            font-size: 20rem;
+        }
+
+        .workshopDetails {
+            font-size: 30rem;
+            margin-top: 100px;
+            margin-bottom: 20px;
+        }
+
+        .workshopDetailsSub {
+            font-size: 20rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .workshopDetailsList {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .workshopDetailItem {
+            display: flex;
+            font-size: 20rem;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            background: url(img/star.svg);
+            width: 50px;
+            height: 50px;  
+            margin-right: 20px;          
+            background-size: contain;
+            flex-shrink: 0;
+        }
+
         @media (max-width: 600px) {
             .logo {
                 width: 200px;
+            }
+
+            .logoPic {
+                height: 200px;
             }
             .title {
                 /* background: url(./ig.png);
@@ -206,16 +301,30 @@
     </style>
 </head>
 <body>
-    <div class="title sec">
-        <!-- <div class="title-text">Zdrowe Relacje</div> -->
-        <img src="logo_1280x1024.svg?1" class="logo">
-    </div>
+    <!-- <div class="title sec">        
+        <img src="img/logo_1280x1024.svg?1" class="logo">
+    </div> -->
 
     <div class="sec">
-        <div class="workshopTitle">Kochaj siebie by kochać i być kochanym</div>
-        <div class="workshopTarget">Ta pomoc skierowana jest do mężczyzn, którzy pochodzą z toksycznych lub rozbitych rodzin i doświadczają problemów w relacjach z kobietami</div>
+        <!-- <div class="workshopTitle">Kochaj siebie by kochać i być kochanym</div> -->
+        <div >
+            <img class="logoPic" src="img/warsztatMiloscDoSiebie.png">
+        </div>
+        <!-- <div class="workshopTarget">Ta pomoc skierowana jest do mężczyzn, którzy pochodzą z toksycznych lub rozbitych rodzin i doświadczają problemów w relacjach z kobietami</div> -->
     </div>
     
+    <div class="sec">
+        <div class="titleMain fontMain padd">Kochaj siebie by kochać i być kochanym</div>
+        <div class="titleSec fontSec padd">Warsztat online - start 30.10.2020r.</div>
+        <div class="questions padd">
+            <div class="questionMain fontMain">Chcesz nauczyć się budować długie pozytywne relacje z kobietami?</div>
+            <div class="questionSec fontSec">Chcesz zrozumieć skąd biorą się Twoje problemy w relacjach?</div>
+            <div class="questionMain fontMain">Działasz odpychająco na kobiety i nie rozumiesz dlaczego?</div>
+            <div class="questionSec fontSec">Chcesz polepszyć swoje relacje z innymi ludźmi?</div>       
+            <div class="questionMain fontMain">Chcesz poznać atrakcyjną i kochającą dziewczynę?</div>
+        </div>
+        <div class="questionsEnd padd">Trafiłeś na rozwiązanie - obejrzyj</div>
+    </div>
 
     <div class="movie sec">
         <!-- <img src="pic.png" style="width: 70%"></div> -->
@@ -225,47 +334,23 @@
 
     </div>
 
-    <div class="sec">
-        <div class="symptomps">
-            <div class="symptompsA">Jeżeli </div>
-            <ul class="symptompsList">
-                <li class="listA">działasz odpychająco na kobiety i nie rozumiesz dlaczego</li>
-                <li class="listA">chcesz poznać atrakcyjną i kochającą dziewczynę</li>
-                <li class="listA">chcesz nauczyć się budować długie pozytywne relacje z kobietami</li>
-                <li class="listA">chcesz polepszyć swoje relacje z innymi ludźmi</li>
-                <li class="listA">chcesz zrozumieć skąd biorą się Twoje problemy w relacjach</li>
-            </ul>
-            <div class="symptompsB">to jest To właściwy warsztat który pomoże Ci to osiągnąć</div>
-        </div>
-    </div>
-
-    <div class="sec secBack">
-        <div class="symptomps">
-            <div class="symptompsA">Na warsztatach </div>
-            <ul class="symptompsList">
-                <li class="listA">zgłębimy temat tego czym właściwie jest miłość do siebie</li>
-                <li class="listA">poznasz czym są Twoje granice, jak je rozpoznawać i wyczuwać kiedy są naruszone</li>
-                <li class="listA">dowiesz się w jaki sposób okazywać sobie miłość i nie ulec samoułudzie</li>
-                <li class="listA">zaznajomisz się z techniką uwalniania negatywnych emocji skumulowanych w Twojej podświadomości </li>
-                <li class="listA">możesz zadawać pytania i dostaniesz wsparcie</li>
-            </ul>
-        </div>
-    </div> 
-    
     <div class="sec ">
-        <div class="symptomps">
-            <div class="symptompsA">Kim jestem ?</div>
-            <div>
-                Jestem facetem, który kiedyś miał bardzo poważne problemy w relacjach z kobietami. 
+        <div class="whoIam padd">
+            <div class="whoIamTitle fontMain">Kim jestem i dlaczego mogę Ci pomóc</div>
+            <div class="whoIamDesc fontSec">
+                Jestem człowiekiem, który kiedyś miał bardzo poważne problemy w relacjach z kobietami - 
+                przez wiele lat nawet nie umiałem ich nawiązywać - a kobiety przedstawione mi przez znajomych po bliższym pozaniu
+                szybko zaczynały omijać mnie szerokim łukiem.
+                <br><br>
                 Nie wiedziałem co jest tego przyczyną - i długo (latami) szukałem odpowiedzi na pytanie: 
                 "dlaczego mi nie idzie"? W końcu natrafiłem na pewne poszlaki, okazało się, że cały problem
-                zaczyna się już w domu rodzinnym, szkole - tam zostajemy źle ukształtowani a
-                z czasem nasze błędne nawyki myślowe się pogłębiają, co powoduje pogorszenie sytuacji. 
+                zaczyna się już w domu rodzinnym, szkole - tam zostajemy źle ukształtowani - choć trafniej można powiedzieć że złamani -
+                a z czasem nasze błędne nawyki myślowe się pogłębiają, co powoduje pogorszenie sytuacji. 
                 To powodowało że moje życie było głęboko niesatysfakcjonujące i powoli zaczynało przypominać horror.                
                 <br><br>
                 Na szczęście natrafiłem na mądrych ludzi i udało mi się zrozumieć zarówno przyczyny 
-                jak i przejść drogę wiodącą do rozwiązania tego problemu. Problemu który nie dotyczy
-                tylko niektórych jednostek ale staje się powoli plagą społeczną przenoszoną z pokolenia na pokolenie.
+                jak i przejść drogę wiodącą do rozwiązania tego problemu. Problemu który okazuje się być dosyć złożony i nie dotyczy
+                tylko niektórych jednostek, ale staje się powoli plagą społeczną przenoszoną z pokolenia na pokolenie.
                 <br><br>
                 Dzięki temu, że udało mi się uleczyć dawne rany i naprostować błędy opiekunów, moje życie
                 całkowicie się zmieniło. Mam kochającą żonę i dziecko, mogę skupiać się na tworzeniu
@@ -275,13 +360,44 @@
         </div>
     </div> 
 
+    <div class="sec secBack ">
+        
+        <div class="workshopDetails fontMain  padd">Na warsztatach online</div>
+        <div class="workshopDetailsSub fontSec  padd">Otrzymasz 6 nagrań i dostęp do tajnej grupy fb, gdzie</div>
+        <div class="workshopDetailsList  padd fontMain" >
+            <div class="workshopDetailItem">
+                <div class="star"></div>
+                zgłębimy temat tego czym właściwie jest miłość do siebie
+            </div>
+            <div class="workshopDetailItem">
+                <div class="star"></div>
+                poznasz czym są Twoje granice, jak je rozpoznawać i wyczuwać kiedy są naruszone
+            </div>
+            <div class="workshopDetailItem">
+                <div class="star"></div>
+                dowiesz się w jaki sposób okazywać sobie miłość i nie ulec samoułudzie
+            </div>
+            <div class="workshopDetailItem">
+                <div class="star"></div>
+                zaznajomisz się z techniką uwalniania negatywnych emocji skumulowanych w Twojej podświadomości sabotujących Twoje działania
+            </div>
+            <div class="workshopDetailItem">
+                <div class="star"></div>
+                możesz zadawać pytania na tajnej grupie fb i dostaniesz wsparcie
+            </div>
+        </div>
+
+    </div> 
+    
+
+
     <div class="offer sec bgSec2 black">      
         <div class="offerInner">
-            <div class="">
+            <!-- <div class="">
                 Warsztat będzie obejmował 6 nagrań video z więdzą teoretyczną i praktyczną (gdzie głównie będizemy skupiali się na pracy z emocjami)
                 <br>oraz dostęp do tajnej grupy wsparcia na fb
-            </div>
-            <div><img class="stars" src="5_stars.svg?1"></div>
+            </div> -->
+            <div><img class="stars" src="img/5_stars.svg?1"></div>
             <br>
 
             <div class="">
@@ -298,9 +414,11 @@
         </div>  
     </div>
     <div class="contact sec">
-        <div class="fb-group">
-            <img style="margin-right: 10px;" width="30px" src="fb.svg"></img>
-            Męska grupa wsparcia na facebooku &nbsp; <a href="https://www.facebook.com/groups/zdrowerelacje">TUTAJ</a>
+        <div class="fb-group">            
+            <img style="margin-right: 10px;" width="30px" src="img/fb.svg"></img>
+            <div>
+                Męska grupa wsparcia na facebooku &nbsp; <a href="https://www.facebook.com/groups/zdrowerelacje">TUTAJ</a>
+            </div>
         </div>
 
         <div class="backButton">&langle; <a href="index.html"> Powrót</a></div>
