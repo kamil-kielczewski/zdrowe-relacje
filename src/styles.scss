@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face { font-family: Cabin; font-weight: 200; src: url(/assets/fonts/Cabin-Regular.ttf); }
+@font-face { font-family: Cabin; font-weight: 400; src: url(/assets/fonts/Cabin-Medium.ttf); }
+@font-face { font-family: Cabin; font-weight: 700; src: url(/assets/fonts/Cabin-SemiBold.ttf); }
+@font-face { font-family: Cabin; font-weight: 900; src: url(/assets/fonts/Cabin-Bold.ttf); }
+
+body {
+    margin:0;
+    font-family: Cabin;
+    font-style: normal;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
