@@ -1,3 +1,85 @@
+// ----- menu -----
+
+/* menu */
+// src menu hambureger: https://codepen.io/mutedblues/pen/MmPNPG
+.top__bar .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .top__bar .menu-icon {
+    cursor: pointer;
+    display: none;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    position: fixed;
+    right: 20px;
+    color: white;
+  }
+  
+  .top__bar .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .top__bar .menu-icon .navicon:before,
+  .top__bar .menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .top__bar .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .top__bar .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .top__bar .menu-btn {
+    display: none;
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .top__bar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+
+// ------ sections ----
+
+
 .section1 {
     display: flex;
     flex-direction: column;
@@ -42,7 +124,7 @@
     font-size: 70px;
     line-height: 75px;
     font-weight: 700;
-    color: #FF8E25
+    color: #FF8E25;    
 }
 
 .subtitle {
@@ -359,4 +441,137 @@ b.about__par {
     justify-content: center;
     align-items: center;
     margin-top: -37px;
+}
+
+.buy__infoLines {
+    margin-top: 60px;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    font-feature-settings: 'salt' on;
+
+}
+
+.buy__info2 {
+    margin-top: 30px;
+}
+
+
+// --- Section 7 ---
+
+.section7 {
+    height: 1114px;
+    background: #FF8E25;
+    margin-top: -200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section7__any_questions {
+    padding-top: 400px;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 40px;
+    // text-align: center;
+    color: #FFFFFF;
+}
+
+.section7__contact {
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 40px;
+    // text-align: center;
+    color: #FFFFFF;
+}
+
+.section7__icons {
+    margin-top: 50px;
+    display: flex;        
+}
+
+.section7__skype {
+    background: url(/assets/img/msn.svg) no-repeat;
+    width: 47px;
+    height: 49px;
+}
+
+.section7__email {
+    background: url(/assets/img/at.svg) no-repeat;
+    width: 49px;
+    height: 54px;
+    margin-left: 40px;
+}
+
+.section7__more {
+    margin-top: 235px;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 40px;
+    // text-align: center;
+    color: #FFFFFF;
+}
+
+.section7__movies {
+    margin-top: 15px;
+    display: flex;
+
+}
+
+.section7__movie {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+// --- section 8 ---
+
+.sectionFooter {
+    height: 137px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__footer {
+    margin-top: 70px;
+    background-image: url(/assets/img/logo.svg);
+    background-size: contain;
+    width: 85px;
+    height: 68px;
+    margin-left: 15px;
+}
+
+.sectionFooter__icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.sectionFooter__yt {
+    background: url(/assets/img/yt.svg);
+    height: 48px;
+    width: 48px;
+}
+
+.sectionFooter__fb {
+    background: url(/assets/img/fb.svg);
+    height: 36px;
+    width: 36px ;
+    margin-left: 20px;
+    margin-right: 35px;
+    margin-top: 6px;
+}
+
+
+
+
+@media (max-width: 1439px) { 
+    .title {
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .top__bar .menu-icon {
+        display: inline-block;
+    }
 }
