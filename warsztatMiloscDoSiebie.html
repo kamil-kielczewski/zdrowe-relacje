@@ -17,428 +17,925 @@
 
 
     <style>
-        html {
-            font-size: 6.25%;
-        }
+        @font-face { font-family: Cabin; font-weight: 200; src: url(./assets/fonts/Cabin-Regular.ttf); }
+        @font-face { font-family: Cabin; font-weight: 400; src: url(./assets/fonts/Cabin-Medium.ttf); }
+        @font-face { font-family: Cabin; font-weight: 700; src: url(./assets/fonts/Cabin-SemiBold.ttf); }
+        @font-face { font-family: Cabin; font-weight: 900; src: url(./assets/fonts/Cabin-Bold.ttf); }
 
-        :root {
-            --main-bg-color:#000;
-            --sec-bg-color: black;
-            --th-bg-color: #ff9999;
-        }
         body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            font-family: Arial, Helvetica, sans-serif;
-            justify-content: center;
-            align-items: center;
-            line-height: 30px;
-        }
-
-        a {
-            color: black;
-        }
-
-        .sec {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
- 
-        .bgSec {
-            background: var(--sec-bg-color);
-            color: white;
-        }
-
-        .bgSec2 {
-            background: var(--th-bg-color);
-            color: white;
-        }
-
-        .black {
-            color: black;
+            margin:0;
+            font-family: Cabin;
+            font-style: normal;
         }
 
 
-        .workshopTitle {
-            font-size: 30px;
-            margin: 50px;
-            text-align: center;
-            /* margin-top: 50px; */
+        html {
+            box-sizing: border-box;
         }
 
-        .workshopTarget {
-            margin: 50px;
-            margin-top: 30px;
-            text-align: center;
+        *, *:before, *:after {
+            box-sizing: inherit;
         }
 
+    .link {
+        width: fit-content;
+        text-decoration: none;
+    }
 
-        /* .titleInner {
-            line-height: 1.1;
-            text-align: center;
-            width: 80%;
-        } */
+/* menu */
+/* src menu hambureger: https://codepen.io/mutedblues/pen/MmPNPG */
+    .top__bar .menu {
+        clear: both;
+        transition: 0.5s;
+        display: flex;
+        margin-right: 130px;
+        margin-top: 31px;
+        color: white;
+        font-size: 15px;
+        text-transform: uppercase;
+        overflow: hidden;
+    }
+  
+  /* menu icon */
+  
+  .top__bar .menu-icon {
+    cursor: pointer;
+    display: none;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    right: 20px;
+    color: white;
+  }
+  
+  .top__bar .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .top__bar .menu-icon .navicon:before,
+  .top__bar .menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .top__bar .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .top__bar .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .top__bar .menu-btn {
+    display: none;
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu {
+    max-height: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .top__bar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .top__bar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
 
-        .logo {
-            width: 500px;
-        }
-
-        .title {
-            /* background: var(--main-bg-color);
-            background: url(./ig.png); */
-            /* background-size: cover; */
-            height: 400px;
-            text-align: center;
-            border-bottom: 1px solid #eadede;
-        }
-
-        .target {
-            margin-top: 100px;
-            margin-bottom: 100px;
-            width: 80%;
-        }
-
-        .movie {
-            /* background: var(--sec-bg-color); */
-        }
-
-        .movieInner {
-            height: 524px;
-            width: 70%;
-        }
-
-        .questions {
-            padding-bottom: 50px;
-            text-align: center;
-            font-size: 30px;
-            line-height: 50px;
-        }
-
-
-        .offer {
-            margin-top: 50px;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .offerInner {
-            width: 80%;
-            text-align: center;
-            font-size: 20rem
-        }
-
-        .offerPar {
-            margin-top: 50px;
-            
-        }
-
-        .offerPar a {
-            color: black;
-        }
-
-        .contact {
-            min-width: 300px;
-            line-height: 30px;
-            margin-top: 100px;
-            font-size: 15rem
-        }
-
-        .footer, .footer a {
-            color: black;
-            /* min-width: 300px; */
-            padding-top: 20px;
-            padding-bottom: 20px;
-            font-size: 15rem
-        }
-
-        .stars {
-            height: 30px;
-        }
-
-        .fb-group {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-        }
-
-        .backButton {
-            margin-top: 20px;
-        }
-
-        .logoPic {
-            width: 100%;
-        }
-
-        /* new layout */
-
-        .padd {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .fontMain {
-            color: #522127;
-        }
-
-        .fontSec {
-            color: #992c32;
-        }
-
-        .titleMain {
-            margin-top: 100px;
-            font-size: 40rem;
-            text-align: center;            
-            line-height: 50rem;
-            margin-bottom: 10px;
-        }
-
-        .titleSec {
-            font-size: 20rem;
-        }
+/* ------ sections ----*/
 
 
+.section1 {
+    display: flex;
+    flex-direction: column;
+    background-image: url(./assets/img/main-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    width:100%;
+    height: 757px;
+}
 
-        .questions {
-            margin-top: 100px;
-        }
+.top__bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
-        .questionMain {
-            font-size: 25px;
-        }
+.logo__top {
+    background-image: url(./assets/img/logo.svg);
+    width:143px;
+    height: 115px;
+    margin-left: 90px;
+    margin-top: 15px;
+}
 
-        .questionSec {
-            font-size: 20px;
-        }
+.menu__item {
+    margin-left: 45px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
 
-        .questionsEnd {
-            margin-top: 50px;
-            font-size: 30rem;
-            margin-bottom: 50px;
-            text-align: center;
-        }
 
-        .whoIam {
-            margin-top: 100px;
-            text-align: center;
-            margin-bottom: 100px;
-            width: 60%;
-        }
+.title {
+    margin-left: 90px;
+    margin-top: 114px;
+    font-size: 70px;
+    line-height: 75px;
+    font-weight: 700;
+    color: #FF8E25;    
+}
 
-        .whoIamTitle {
-            font-size: 30rem;
-        }
+.subtitle {
+    margin-left: 90px;
+    margin-top: 20px;
+    margin-bottom: 34px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: black;
+    text-transform: uppercase;
+}
 
-        .whoIamDesc {
-            margin-top: 50px;
-            font-size: 20rem;
-        }
+.button {
+    background: #00A4AB;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+    align-self: flex-start;
+    margin-left: 90px;
+    padding: 21px 36px;
+    font-size: 30px;
+    line-height: 36px;
+    color: white;
+    text-transform: uppercase;;
+}
 
-        .workshopDetails {
-            font-size: 30rem;
-            margin-top: 100px;
-            margin-bottom: 20px;
-        }
 
-        .workshopDetailsSub {
-            font-size: 20rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+/* -------------------- */
+.section2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: -50px;
+}
 
-        .workshopDetailsList {
-            display: flex;
-            flex-direction: column;
-        }
+.questions {
+    width: 931px;
+    background: #FF8E25;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 75px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
 
-        .workshopDetailItem {
-            display: flex;
-            font-size: 20rem;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+.panel:after {
+    content: "";
+    top: 70px;
+    left: 70px;
+    position: relative;
+    border-style: solid;
+    border-color: #FF8E25 transparent transparent transparent;
+    border-width: 70px 395px 0 395px;
+}
 
-        .star {
-            background: url(img/star.svg);
-            width: 50px;
-            height: 50px;  
-            margin-right: 20px;          
-            background-size: contain;
-            flex-shrink: 0;
-        }
+.points {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 50px;
+    margin-top: 50px;
+}
 
-        @media (max-width: 600px) {
-            .logo {
-                width: 200px;
-            }
+.points__title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+}
 
-            .logoPic {
-                height: 200px;
-            }
-            .title {
-                /* background: url(./ig.png);
-                background-size: cover; */
-                height: 200px;
-                text-align: center;
-            }
+.heart {
+    display: inline-block;
+    background-image: url(./assets/img/heart.svg);
+    width: 20px;
+    height: 20px;
+    margin-right: 24px;
+    flex-shrink: 0;
+}
 
-            .movieInner {
-                height: 233px;
-                width: 100%;
-            }
+/* --- Section 3 --- */
 
-            .symptomps {
-                width: 90%;
-            }
+.section3 {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
 
-            .whoIam {
-                width: 90%;
-            }
-        }
+.movieInner {
+    height: 413px;
+    width: 734px;
+}
+
+/* --- Section 4 --- */
+
+.section4 {
+    margin-top: 68px;
+    padding-top: 150px;    
+    padding-bottom: 100px;
+    background: #FFFBDA;
+    display: flex;
+    justify-content: center;
+}
+
+.section4__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__container {
+    display: flex;
+    width: 1240px;
+    justify-content: space-between;
+}
+
+.about__textLeft {
+    display: flex;
+    flex-direction: column;
+    width: 568px;
+}
+
+.about__title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 35px;
+}
+
+.about__left {
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+b.about__left {
+    font-weight: 900;
+}
+
+.about__pic {
+    width: 624px;
+    height: 468px;
+    right: 107px;
+    top: 1702px;
+    background: url(./assets/img/me.jpg);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 75px;
+}
+
+.about__par {
+    margin-top: 15px;
+}
+
+b.about__par {
+    font-weight: 900;
+}
+
+.about__rest {
+    width: 1240px;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.about__icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 83px;
+}
+
+.about__yt {
+    background: url(./assets/img/yt.svg);
+    height: 48px;
+    width: 48px;
+}
+
+.about__fb {
+    background: url(./assets/img/fb.svg);
+    height: 36px;
+    width: 36px ;
+    margin-left: 110px;
+    margin-top: 6px;
+}
+
+
+/* --- section 5 --- */
+
+.section5 {
+    margin-top: 172px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.workshopCardsList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.workshop__title {
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.workshop__desc {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 80px;
+}
+
+.workshopCard {
+    width: 260px;
+    height: 351px;    
+    background: #FF8E25;
+    border-radius: 74px;
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+}
+
+.workshopCard__icon {    
+    flex-basis: 100px;
+    width: 100px;
+}
+
+.iconA {
+    background: url(./assets/img/bigHeart.svg) no-repeat center;
+}
+
+.iconB {
+    background: url(./assets/img/hand.svg) no-repeat center;
+}
+
+.iconC {
+    background: url(./assets/img/handHeart.svg) no-repeat center;
+}
+
+.iconD {
+    background: url(./assets/img/meditate.svg) no-repeat center;
+}
+
+.iconE {
+    background: url(./assets/img/question.svg) no-repeat center;
+}
+
+
+.workshopCard__desc {
+    flex-basis: 3;
+}
+
+
+/* --- section 6 --- */
+
+.section6 {
+    margin-top: 172px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buy {
+    width: 905px;
+    height: 444px;
+    background: #FFFFFF;
+    border: 1px solid #00A4AB;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buy__title {
+    width: 353px;
+    height: 77px;
+    left: 544px;
+    top: 3543px;
+    background: #00A4AB;
+    color: #FFFFFF;
+    border-radius: 24px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -37px;
+}
+
+.buy__infoLines {
+    margin-top: 60px;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    font-feature-settings: 'salt' on;
+}
+
+.buy__info2 {
+    margin-top: 30px;
+}
+
+.buy__info3 {
+    font-weight: 900;
+}
+
+
+/* --- Section 7 --- */
+
+.section7 {
+    height: 1114px;
+    background: #FF8E25;
+    margin-top: -200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section7__any_questions {
+    padding-top: 400px;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+.section7__contact {
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+.section7__icons {
+    margin-top: 50px;
+    display: flex;        
+}
+
+.section7__skype {
+    background: url(./assets/img/msn.svg) no-repeat;
+    width: 47px;
+    height: 49px;
+}
+
+.section7__email {
+    background: url(./assets/img/at.svg) no-repeat;
+    width: 49px;
+    height: 54px;
+    margin-left: 40px;
+}
+
+.section7__more {
+    margin-top: 235px;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+.section7__movies {
+    margin-top: 15px;
+    display: flex;
+}
+
+.section7__movie {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+/* --- section 8 --- */
+
+.sectionFooter {
+    height: 137px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__footer {
+    margin-top: 70px;
+    background-image: url(./assets/img/logo.svg);
+    background-size: contain;
+    width: 85px;
+    height: 68px;
+    margin-left: 15px;
+}
+
+.sectionFooter__icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.sectionFooter__yt {
+    background: url(./assets/img/yt.svg);
+    height: 48px;
+    width: 48px;
+}
+
+.sectionFooter__fb {
+    background: url(./assets/img/fb.svg);
+    height: 36px;
+    width: 36px ;
+    margin-left: 20px;
+    margin-right: 35px;
+    margin-top: 6px;
+}
+
+
+
+
+@media (max-width: 1439px) { 
+    .title {
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+
+    .top__bar .menu-icon {
+        display: inline-block;
+    }
+
+    .top__bar  .logo__top {
+        background-image: url(./assets/img/logo.svg);
+        width:143px;
+        height: 115px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .top__bar .menu {
+        clear: both;
+        max-height: 0;
+        flex-direction: column;
+
+        margin-top: 51px;        
+        position: fixed;
+        width: 100%;
+        background: rgba(0,0,0,0.4);
+    }
+
+    .top__bar .menu .menu__item {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 0px;
+
+        display: block;
+        width: 100%;        
+    }
+
+    .top__bar .menu .menu__item:hover {
+        background: rgba(50,50,50,0.4);
+    }
+
+    .panel {
+        width: 90%;
+    }
+
+    .panel:after {
+        border: none;        
+    }
+
+    .section3 {
+        margin-top: 100px;
+    }
+
+    .questions {
+        width: 100%;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    .points__item {
+        display: flex;
+        align-items: center;
+        line-height: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .section4 {
+        padding-top: 80px;
+    }
+
+    .section4__container { 
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .section5 {
+        margin-top: 100px;
+    }
+
+    .section6 {
+        margin-top: 100px;
+    }
+
+    .about__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about__textLeft {
+        width: 100%;
+    }
+
+    
+    .about__pic {
+        width: 90%;
+        background-position: top;
+        background-size: cover;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .about__rest {
+        width: 100%;
+    }
+
+    .workshopCardsList {
+        flex-direction: column;
+    }
+
+    .workshopCard {
+        margin-bottom: 10px;
+    }
+
+    .workshop__desc {
+        text-align: center;
+        line-height: 40px;
+        margin: 30px;
+    }
+
+    .workshop__title {
+        line-height: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+        text-align: center;
+    }
+
+    .buy {
+        width: auto;
+        height: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 60px;
+        margin-left: 30px;
+        margin-right: 30px;
+        
+    }
+
+    .section7 {
+        height: auto;
+
+    }
+
+    .section7__movies {
+        flex-direction: column;
+    }
+
+    .section7__movie {
+        margin-bottom: 30px;
+    }
+}
 
     </style>
 </head>
 <body>
-    <!-- <div class="title sec">        
-        <img src="img/logo_1280x1024.svg?1" class="logo">
-    </div> -->
-
-    <div class="sec">
-        <!-- <div class="workshopTitle">Kochaj siebie by kochać i być kochanym</div> -->
-        <div >
-            <img class="logoPic" src="img/warsztatMiloscDoSiebie.png">
-        </div>
-        <!-- <div class="workshopTarget">Ta pomoc skierowana jest do mężczyzn, którzy pochodzą z toksycznych lub rozbitych rodzin i doświadczają problemów w relacjach z kobietami</div> -->
-    </div>
     
-    <div class="sec">
-        <div class="titleMain fontMain padd">Kochaj siebie by kochać i być kochanym</div>
-        <div class="titleSec fontSec padd">Warsztat online - start 30.11.2020r.</div>
-        <div class="questions padd">
-            <div class="questionMain fontMain">Chcesz nauczyć się budować długie pozytywne relacje z kobietami?</div>
-            <div class="questionSec fontSec">Chcesz zrozumieć skąd biorą się Twoje problemy w relacjach?</div>
-            <div class="questionMain fontMain">Działasz odpychająco na kobiety i nie rozumiesz dlaczego?</div>
-            <div class="questionSec fontSec">Chcesz polepszyć swoje relacje z innymi ludźmi?</div>       
-            <div class="questionMain fontMain">Chcesz poznać atrakcyjną i kochającą dziewczynę?</div>
-        </div>
-        <div class="questionsEnd padd">Trafiłeś na rozwiązanie - obejrzyj</div>
-    </div>
 
-    <div class="movie sec">
-        <!-- <img src="pic.png" style="width: 70%"></div> -->
+    <div class="section1">
+        <div class="top__bar">
+          <div class="logo__top"></div>
+      
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      
+          <div class="menu">
+            <!-- <div class="menu__item">Sesje Indywidualne</div> -->
+            <a href="#workshop" class="menu__item"> Warsztaty </a>
+            <a href="#aboutMe" class="menu__item"> O mnie </a>
+            <a href="#contact" class="menu__item"> Kontakt </a>
+            <!-- <div class="menu__item">Kontakt</div> -->
+            <!-- <div href="#workshop" class="menu__item"> Warsztaty </div> -->
+            <!-- <div class="menu__item">O mnie</div> -->
+          </div>
+        </div>
+      
+        <div class="title">
+          Kochaj Siebie<br>
+          by  Kochać<br>
+          i Być Kochanym
+        </div>
+      
+        <div class="subtitle">
+          Warsztaty online
+        </div>
+      
+        <a href="#subscribeToWorkshop" class="link"> 
+            <div class="button">
+            Zapisz się
+            </div>
+        </a>
+      
+      </div>
+      
+      <div class="section2">
+        <div class="panel">
+          <div class="questions">
+            <div class="points">
+              <div class="points__item"><div class="heart"></div> Chcesz nauczyć się budować długie pozytywne relacje z kobietami?</div>
+              <div class="points__item"><div class="heart"></div> Chcesz zrozumieć skąd biorą się Twoje problemy w relacjach?</div>
+              <div class="points__item"><div class="heart"></div> Działasz odpychająco na kobiety i nie rozumiesz dlaczego?</div>
+              <div class="points__item"><div class="heart"></div> Chcesz polepszyć swoje relacje z innymi ludźmi?</div>
+              <div class="points__item"><div class="heart"></div> Chcesz poznać atrakcyjną i kochającą dziewczynę?</div>
+              <div class="points__title">Trafiłeś na rozwiązanie</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section3">
         <div class="movieInner">            
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/T8AEbQrtuto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-
-    </div>
-
-    <div class="sec ">
-        <div class="whoIam">
-            <div class="whoIamTitle fontMain">Kim jestem i dlaczego mogę Ci pomóc</div>
-            <div class="whoIamDesc fontSec">
-                Jestem człowiekiem, który kiedyś miał bardzo poważne problemy w relacjach z kobietami - 
-                przez wiele lat nawet nie umiałem ich nawiązywać - a kobiety przedstawione mi przez znajomych po bliższym pozaniu
-                szybko zaczynały omijać mnie szerokim łukiem.
-                <br><br>
-                Nie wiedziałem co jest tego przyczyną - i długo (latami) szukałem odpowiedzi na pytanie: 
-                "dlaczego mi nie idzie"? W końcu natrafiłem na pewne poszlaki, okazało się, że cały problem
-                zaczyna się już w domu rodzinnym, szkole - tam zostajemy źle ukształtowani - choć trafniej można powiedzieć że złamani -
-                a z czasem nasze błędne nawyki myślowe się pogłębiają, co powoduje pogorszenie sytuacji. 
-                To powodowało że moje życie było głęboko niesatysfakcjonujące i powoli zaczynało przypominać horror.                
-                <br><br>
-                Na szczęście natrafiłem na mądrych ludzi i udało mi się zrozumieć zarówno przyczyny 
-                jak i przejść drogę wiodącą do rozwiązania tego problemu. Problemu który okazuje się być dosyć złożony i nie dotyczy
-                tylko niektórych jednostek, ale staje się powoli plagą społeczną przenoszoną z pokolenia na pokolenie.
-                <br><br>
-                Dzięki temu, że udało mi się uleczyć dawne rany i naprostować błędy opiekunów, moje życie
-                całkowicie się zmieniło. Mam kochającą żonę i dziecko, mogę skupiać się na tworzeniu
-                pozytywnych wartości i nie być hamowany przez dawne problemy. 
-                Moje życie zyskało sens i zaczęło przynosić satysfakcję. Czego i Tobie życzę :)
-            </div>
-        </div>
-    </div> 
-
-    <div class="movie sec">
-        <!-- <img src="pic.png" style="width: 70%"></div> -->
-        <div class="movieInner">        
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pKzGQvFMWbY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-    </div>
-
-    <div class="sec secBack ">
+      </div>
+      
+      <div id="aboutMe" class="section4">
+        <div class="section4__container">
         
-        <div class="workshopDetails fontMain  padd">Na warsztatach online</div>
-        <div class="workshopDetailsSub fontSec  padd">Warsztat potrwa 6 tygodni otrzymasz dostęp tajnej grupy fb i nagrań, gdzie</div>
-        <div class="workshopDetailsList  padd fontMain" >
-            <div class="workshopDetailItem">
-                <div class="star"></div>
-                nauczysz się czym właściwie jest miłość do siebie
+          <div class="about__container">
+            <div class="about__textLeft">
+              <div class="about__title">Kim jestem i dlaczego potrafię Ci pomóc?</div>
+              <div class="about__left">
+                <div class="about__par">Jestem człowiekiem, który kiedyś miał bardzo poważne problemy w relacjach z kobietami - przez wiele lat nawet nie umiałem ich nawiązywać 
+                  - a kobiety przedstawione mi przez znajomych po bliższym pozaniu szybko <b>zaczynały omijać mnie szerokim łukiem</b>.</div>
+                <div class="about__par">Nie wiedziałem co jest tego przyczyną - i długo (latami) szukałem odpowiedzi na pytanie: <b>"dlaczego mi nie idzie"</b>? </div>
+                <div class="about__par">W końcu natrafiłem na pewne poszlaki, <b>okazało się, że cały problem zaczyna się już w domu rodzinnym, szkole</b> 
+                  - tam zostajemy źle ukształtowani - choć trafniej można powiedzieć że złamani - a z czasem nasze błędne nawyki myślowe się pogłębiają, co powoduje pogorszenie sytuacji.</div>
+              </div>
             </div>
-            <div class="workshopDetailItem">
-                <div class="star"></div>
-                poznasz czym są Twoje granice, jak je rozpoznawać i wyczuwać kiedy są naruszone
+            <div class="about__pic"></div>
+          </div>
+      
+          <div class="about__rest">
+            <div class="about__par"><b>To powodowało że moje życie było głęboko niesatysfakcjonujące i powoli zaczynało przypominać horror.</b></div>
+            <div class="about__par">Na szczęście natrafiłem na mądrych ludzi i <b>udało mi się zrozumieć zarówno przyczyny jak i
+        przejść drogę wiodącą do rozwiązania tego problemu</b>. Problemu który okazuje się być dosyć
+        złożony i nie dotyczy tylko niektórych jednostek, ale staje się powoli plagą społeczną
+        przenoszoną z pokolenia na pokolenie.</div>
+            <div class="about__par">Dzięki temu, że udało mi się uleczyć dawne rany i naprostować błędy opiekunów, moje życie
+        całkowicie się zmieniło. Mam kochającą żonę i dziecko, mogę skupiać się na tworzeniu
+        pozytywnych wartości i nie być hamowany przez dawne problemy. <b>Moje życie zyskało sens i
+        zaczęło przynosić satysfakcję. Czego i Tobie życzę :)</b>
             </div>
-            <div class="workshopDetailItem">
-                <div class="star"></div>
-                nauczysz się w jaki sposób okazywać sobie miłość i nie ulec samoułudzie
-            </div>
-            <div class="workshopDetailItem">
-                <div class="star"></div>
-                przetransformujesz swoje negatywne emocje skumulowane w podświadomości sabotujące Twoje działania
-            </div>
-            <div class="workshopDetailItem">
-                <div class="star"></div>
-                będizesz mógł zadawać pytania i dostaniesz wsparcie
-            </div>
+          </div>
+      
+          <div class="about__icons">
+            <a href="https://www.youtube.com/channel/UCxFgE06RvorRNZOo8Aq02Rg"><div class="about__yt"></div></a>
+            <a href="https://www.facebook.com/groups/zdrowerelacje"><div class="about__fb"></div></a>
+          </div>
+      
+      
         </div>
-
-    </div> 
-    
-
-
-    <div class="offer sec bgSec2 black">      
-        <div class="offerInner">
-            <!-- <div class="">
-                Warsztat będzie obejmował 6 nagrań video z więdzą teoretyczną i praktyczną (gdzie głównie będizemy skupiali się na pracy z emocjami)
-                <br>oraz dostęp do tajnej grupy wsparcia na fb
-            </div> -->
-            <div><img class="stars" src="img/5_stars.svg?1"></div>
-            <br>
-
-            <div class="">
-                Płatność <b>350 PLN</b> do startu warsztatów 30.11.2020r <br> 
-                (po tym terminie 550 PLN) na rachunek (santander)<br>
-                <b>77 1090 1362 0000 0001 0456 7318</b> <br>
-                Kamil Kiełczewski Poznań - z dopiskiem "warsztat online"
-            </div>
-            
-            <div class="offerPar">
-                Po dokonaniu wpłaty napisz do mnie na 
-                <a href="mailto:kamil.k.kielczewski@gmail.com">kamil.k.kielczewski@gmail.com</a> lub na <a href="https://www.facebook.com/profile.php?id=100006361845380">fb</a>
-            </div>
-        </div>  
-    </div>
-    <div class="contact sec">
-        <div class="fb-group">            
-            <img style="margin-right: 10px;" width="30px" src="img/fb.svg"></img>
-            <div>
-                Męska grupa wsparcia na facebooku &nbsp; <a href="https://www.facebook.com/groups/zdrowerelacje">TUTAJ</a>
-            </div>
+      </div>
+      
+      <div id="workshop" class="section5">
+        <div class="workshop__title">Warsztacie on line</div>
+        <div class="workshop__desc">Warsztat potrwa 6 tygodni. Otrzymasz dostęp tajnej grupy fb i nagrań, gdzie:</div>
+      
+      
+        <div class="workshopCardsList">
+          <div class="workshopCard">
+            <div class="iconA workshopCard__icon"></div>
+            <div class="workshopCard__desc">Nauczysz się czym właściwie jest miłość do siebie</div>
+          </div>
+      
+          <div class="workshopCard">
+            <div class="iconB workshopCard__icon"></div>
+            <div class="workshopCard__desc">Poznasz czym są Twoje granice, jak je rozpoznawać i wyczuwać kiedy są naruszone</div>
+          </div>
+      
+          <div class="workshopCard">
+            <div class="iconC workshopCard__icon"></div>
+            <div class="workshopCard__desc">Nauczysz się w jaki sposób okazywać sobie miłość i nie ulec samoułudzie</div>
+          </div>
+      
+          <div class="workshopCard">
+            <div class="iconD workshopCard__icon"></div>
+            <div class="workshopCard__desc">Przetransformujesz swoje negatywne emocje skumulowane w podświadomości sabotujące Twoje działania</div>
+          </div>
+      
+          <div class="workshopCard">
+            <div class="iconE workshopCard__icon"></div>
+            <div class="workshopCard__desc">Będziesz mógł zadawać pytania i dostaniesz wsparcie</div>
+          </div>
         </div>
+      </div>
+      
+      <div id="subscribeToWorkshop" class="section6">
+      
+        <div class="buy">
+          <div class="buy__title">Twoja inwestycja</div>
+          <div class="buy__infoLines">
+            <div class="buy__info">Płatność 350 PLN do startu warsztatów 30.11.2020r.</div>
+            <div class="buy__info">(po tym terminie 550 PLN) na rachunek (santander)</div>
+            <div class="buy__info3">77 1090 1362 0000 0001 0456 7318</div>
+            <div class="buy__info">Kamil Kiełczewski Poznań - z dopiskiem "warsztat online"</div>      
+            <div class="buy__info2">Po dokonaniu wpłaty napisz do mnie</div>
+            <div class="buy__info">na kamil.k.kielczewski@gmail.com lub na <a href="https://www.facebook.com/profile.php?id=100006361845380">fb</a></div>
+          </div>
+        </div>
+      
+      </div>
+      
+      
+      <div id="contact" class="section7">
+        <div class="section7__any_questions">Masz pytania?</div>
+        <div class="section7__contact">Skontaktuj się ze mną</div>
+        <div class="section7__icons">
+          <a href="https://join.skype.com/invite/f0vOWG2Kag9e"> <div class="section7__skype"></div> </a>
+          <a href="mailto:kamil.k.kielczewski@gmail.com"> <div class="section7__email"></div> </a>
+        </div>
+        <div class="section7__more">Więcej filmów</div>
+      
+        <div class="section7__movies">
+          <div class="section7__movie">
+            <iframe width="400" height="221" src="https://www.youtube.com/embed/8V4alZNTiyc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      
+          <div class="section7__movie">
+            <iframe width="400" height="221" src="https://www.youtube.com/embed/sdyD4Jl_EF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+      
+          <div class="section7__movie">
+            <iframe width="400" height="221" src="https://www.youtube.com/embed/pKzGQvFMWbY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sectionFooter">
+        <div class="logo__footer"></div>
+      
+        <div class="sectionFooter__icons">
+          <a href="https://www.youtube.com/channel/UCxFgE06RvorRNZOo8Aq02Rg"><div class="sectionFooter__yt"></div></a>
+          <a href="https://www.facebook.com/groups/zdrowerelacje"><div class="sectionFooter__fb"></div></a>
+        </div>
+      </div>
 
-        <div class="backButton">&langle; <a href="index.html"> Powrót</a></div>
-    </div>
 
-    <div class="footer sec">
-        <div>&copy; <a href="https://airavana.net" class="footLink"> Airavana Systems</a></div>
-    </div>
 </body>
 </html>
