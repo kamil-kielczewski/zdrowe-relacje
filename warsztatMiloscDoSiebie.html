@@ -186,7 +186,8 @@
     background: #00A4AB;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 24px;
-    align-self: flex-start;
+    /* align-self: flex-start; */
+    display: inline-block;
     margin-left: 90px;
     padding: 21px 36px;
     font-size: 30px;
@@ -600,6 +601,20 @@ b.about__par {
 }
 
 @media (max-width: 1439px) { 
+    .subtitle {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .button {
+        margin-left: 0;
+    }
+
+    .subscrLink {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .title {
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         margin-left: 30px;
@@ -791,7 +806,7 @@ b.about__par {
           Warsztaty online
         </div>
       
-        <a href="#subscribeToWorkshop" class="link"> 
+        <a href="#subscribeToWorkshop" class="subscrLink link"> 
             <div class="button">
             Zapisz się
             </div>
