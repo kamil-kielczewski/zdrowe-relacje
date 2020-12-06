@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="0; url=warsztatMiloscDoSiebie.html" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdrowe Relacje</title>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26418185-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-26418185-4');
+    </script>
+
+    <style>
+        :root {
+            --main-bg-color:#000;
+            --sec-bg-color: black;
+            --th-bg-color: #ff9999;
+        }
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: white;
+        }
+
+        .black {
+            color: black;
+        }
+
+        .sec {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        .padd {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .logo {
+            width: 500px;
+        }
+
+        .title {
+            /* background: var(--main-bg-color);
+            background: url(./ig.png); */
+            /* background-size: cover; */
+            height: 400px;
+            text-align: center;
+            border-bottom: 1px solid #eadede;
+        }
+
+        .title-text {
+            color: white;
+            font-size: 80px;
+            line-height: 60px;
+            font-weight: bolder;
+            margin-bottom: 100px;
+        }
+
+        .target {
+            margin-top: 150px;
+            margin-bottom: 100px;
+            width: 80%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 50px;
+        }
+
+        .movie {
+            /* background: var(--sec-bg-color); */
+            margin-top: 50px;
+        }
+
+        .movieInner {
+            height: 524px;
+            width: 70%;
+        }
+
+
+
+        .bgSec {
+            background: var(--sec-bg-color);
+            color: white;
+        }
+
+        .bgSec2 {
+            background: var(--th-bg-color);
+            color: black;
+        }
+
+        .bgSec2 a {
+            color: black;
+        }
+
+        .symptomps {
+            max-width: 70%;
+            font-size: 20px;
+        }
+
+        .symptompsA {
+            margin: 100px 0px 30px 0px;
+            text-align: center;
+        }
+
+        .symptompsB {
+            margin: 30px 0px 50px 0px;
+        }
+
+        .symptompsList {
+            list-style-position: outside;
+        }
+
+        .listA {
+            display: list-item;         
+            list-style-type: disc;      
+        }
+
+        .offer {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .offerInner {
+            width: 70%;
+            text-align: center;
+        }
+
+        .workshop {
+            margin-top: 50px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            font-size: 30px;
+        }
+
+        .workshop-title {
+            padding-bottom: 30px;
+        }
+
+        .workshop-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .workshop-item {
+            display: flex;
+        }
+
+        .rightAngle {
+            margin-right: 20px;
+        }
+
+        .offerWorkshop {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .offerTitle {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        .offerDesc {
+            font-size: 20px;
+        }
+
+        .offerPrice {
+            margin-top: 50px;
+            font-size: 20px;
+        }
+
+        .contact {
+            min-width: 300px;
+            line-height: 30px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            font-size: 20px;
+        }
+
+        .footer {
+            color: black;
+            /* min-width: 300px; */
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .footer a {
+            color: black;
+        }
+
+        
+        .fb-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contactInner {
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+
+            .logo {
+                width: 200px;
+            }
+            .title {
+                /* background: url(./ig.png);
+                background-size: cover; */
+                height: 200px;
+                text-align: center;
+            }
+
+            .symptomps {
+                max-width: 80%;
+            }
+
+            .title-text {
+                color: white;
+                font-size: 40px;
+                line-height: 40px;
+                font-weight: bolder;
+                margin-bottom: 0px;
+            }
+
+
+            .movieInner {
+                height: 233px;
+                width: 100%;
+            }
+
+            .target {
+                margin-top: 100px;
+                margin-bottom: 100px;
+                width: 80%;
+                text-align: center;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 30px;
+            }
+
+            .offerInner {
+                width: 80%
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title sec">
+        <!-- <div class="title-text">Zdrowe Relacje</div> -->
+        <img src="img/logo_1280x1024.svg?1" class="logo">
+    </div>
+    <div class="target sec">Ta pomoc skierowana jest do mężczyzn,<br>
+        którzy pochodzą z toksycznych lub rozbitych rodzin<br>
+        i doświadczają problemów w relacjach z kobietami
+    </div>
+
+    <div class="movie sec">
+        <!-- <img src="pic.png" style="width: 70%"></div> -->
+        <div class="movieInner">            
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4bs1sKukOwE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+    <div class="sec ">
+        <div class="symptomps">
+            <div class="symptompsA">Jeżeli zaobserwowałeś u siebie jeden z następujących objawów</div>
+            <ul class="symptompsList">
+                <li class="listA">czujesz że Ty sam sabotujesz swoje działania</li>
+                <li class="listA">działasz odpychająco na kobiety i nie rozumiesz dlaczego</li>
+                <li class="listA">często dopadają Cię negatywne emocje jak smutek, apatia, lęk (przed podejściem) itp.</li>
+                <li class="listA">czujesz że nie należ Ci się to co dobre</li>
+                <li class="listA">czujesz bezsilność, utknąłeś w miejcu jeśli chodzi o relacje z kobietami i nie wiesz co dalej</li>
+                <li class="listA">Twoje relacje z partnerką są nie dobre</li>
+                <li class="listA">czujesz że w dzieciństwie coś w Tobie "zgasło"</li>
+                <li class="listA">czujesz że Twoje otoczenie w dzieciństwie było wrogo nastawione do Ciebie (rodzice, rodzeńśtwo i/lub szkoła)</li>
+            </ul>
+            <div class="symptompsB">to trafiłeś do właściwego człowieka - nazywam się Kamil Kiełczewski i sam przechodziłem przez te problemy i jestem w stanie Ci pomóc</div>
+        </div>
+    </div>
+
+
+
+    <div class="workshop sec bgSec2 ">      
+        <div class="workshop-title">
+            <b>Warsztaty online</b>
+        </div>
+        
+        <div class="workshop-list padd">
+            <div class="workshop-item"><div class="rightAngle">&rangle;</div>  <a href="warsztatMiloscDoSiebie.html">Kochaj siebie by kochać i być kochanym</a> </div>
+        </div>
+
+    </div>
+
+    <div class="offer sec">      
+        <div class="offerInner">
+            <div class="offerTitle">
+                <b>Konsultacje indywidualne</b>
+            </div>
+            <div class="offerDesc">
+                Na moich konsultacjach skype/tel/fb-phone przyjrzymy się Twojej konkretnej sytuacji i popracujemy nad tzw. "Inner Game" - "wewnętrzną grą" i tutaj skupimy się na tym aby naprostować błędy jakie pojawiają się w obszarze Twoich przekonań a także zostaniesz dokładnie poinstruowany co robić z emocjami, które grają fundamentalną rolę przy interakcjach z kobietami - jak z nimi pracować w samotności oraz podczas interakcji. Ta wiedza ma unikalny charakter i została sprawdzona w praktyce.
+            </div>
+            
+            <div class="offerPrice">
+                Cena godzinnej konsultacji wynosi 300zł - konsultacja zwykle zostanie rozbita na 2 rozmowy w odstępie od tygodnia do miesiąca abyś miał czas na zastosowanie instrukcji i byś mógł dostać feedback.
+            </div>
+        </div>  
+    </div>
+    <div class="contact sec bgSec2 ">
+        <div class="contactInner padd">
+            <div>Jeżeli jesteś zainteresowany zadzwoń </div>
+            <div><b>+48 510 367 595</b></div>
+            <div>lub napisz</div> 
+            <div><a class="black" href="mailto:kamil.k.kielczewski@gmail.com">kamil.k.kielczewski@gmail.com</a></div>
+            <div>aby otrzymać dalsze szczegóły</div>
+            <br><br>
+            <div class="fb-group ">
+                <img style="margin-right: 10px;" width="30px" src="img/fb.svg"></img>
+                <div style="text-align: center;">Męska grupa wsparcia na facebooku <a class="black" href="https://www.facebook.com/groups/zdrowerelacje">TUTAJ</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer sec ">
+        <div>&copy; <a href="https://airavana.net" class="footLink"> Airavana Systems</a></div>
+    </div>
+</body>
+</html>
